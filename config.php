@@ -34,6 +34,12 @@ $THEME->scss = function($theme) {
 };
 
 $THEME->layouts = [
+    // Standard layout with blocks.
+    'standard' => array(
+        'file' => 'drawers.php',
+        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'defaultregion' => 'side-pre',
+    ),
     // Main course page.
     'course' => array(
         'file' => 'drawers.php',
