@@ -34,6 +34,19 @@ $THEME->scss = function($theme) {
 };
 
 $THEME->layouts = [
+    // Main course page.
+    'course' => array(
+        'file' => 'drawers.php',
+        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'defaultregion' => 'side-pre',
+        'options' => array('langmenu' => true),
+    ),
+    // Part of course, typical for modules - default page layout if $cm specified in require_login().
+    'incourse' => array(
+        'file' => 'drawers.php',
+        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'defaultregion' => 'side-pre',
+    ),
     // The site home page.
     'frontpage' => [
         'file' => 'frontpage.php',
