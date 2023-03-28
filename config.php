@@ -77,6 +77,7 @@ $THEME->layouts = [
         'regions' => ['side-pre'],
         'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
         'options' => array('nonavbar' => true),
+        'defaultregion' => 'side-pre',
     ),
     // My dashboard page.
     'mydashboard' => array(
@@ -84,6 +85,7 @@ $THEME->layouts = [
         'regions' => array('side-pre'),
         'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
         'options' => array('nonavbar' => true, 'langmenu' => true),
+        'defaultregion' => 'side-pre',
     ),
     // My public page.
     'mypublic' => array(
