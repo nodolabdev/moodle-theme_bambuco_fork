@@ -65,7 +65,7 @@ $hasblockstop = strpos($blockstophtml, 'data-block=') !== false;
 $blocksbottomhtml = $OUTPUT->blocks('bottom');
 $hasblocksbottom = strpos($blocksbottomhtml, 'data-block=') !== false;
 
-$blockscontenthtml = $OUTPUT->blocks('content');
+$blockscontenthtml = $OUTPUT->blocks('intocontent');
 $hasblockscontent = strpos($blockscontenthtml, 'data-block=') !== false;
 
 $courseindex = core_course_drawer();

@@ -37,45 +37,45 @@ $THEME->layouts = [
     // Standard layout with blocks.
     'standard' => array(
         'file' => 'drawers.php',
-        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'bottom'],
         'defaultregion' => 'side-pre',
     ),
     // Main course page.
     'course' => array(
         'file' => 'drawers.php',
-        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'bottom'],
         'defaultregion' => 'side-pre',
         'options' => array('langmenu' => true),
     ),
     'coursecategory' => array(
         'file' => 'drawers.php',
-        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'bottom'],
         'defaultregion' => 'side-pre',
     ),
     // Part of course, typical for modules - default page layout if $cm specified in require_login().
     'incourse' => array(
         'file' => 'drawers.php',
-        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'bottom'],
         'defaultregion' => 'side-pre',
     ),
     // The site home page.
     'frontpage' => [
         'file' => 'frontpage.php',
-        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'bottom'],
         'defaultregion' => 'side-pre',
         'options' => ['nonavbar' => true],
     ],
     // Server administration scripts.
     'admin' => array(
         'file' => 'drawers.php',
-        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'bottom'],
         'defaultregion' => 'side-pre',
     ),
     // My courses page.
     'mycourses' => array(
         'file' => 'drawers.php',
         'regions' => ['side-pre'],
-        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'bottom'],
         'options' => array('nonavbar' => true),
         'defaultregion' => 'side-pre',
     ),
@@ -83,20 +83,20 @@ $THEME->layouts = [
     'mydashboard' => array(
         'file' => 'drawers.php',
         'regions' => array('side-pre'),
-        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'bottom'],
         'options' => array('nonavbar' => true, 'langmenu' => true),
         'defaultregion' => 'side-pre',
     ),
     // My public page.
     'mypublic' => array(
         'file' => 'drawers.php',
-        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'bottom'],
         'defaultregion' => 'side-pre',
     ),
     // The pagelayout used for reports.
     'report' => array(
         'file' => 'drawers.php',
-        'regions' => ['above', 'top', 'content', 'side-pre', 'bottom'],
+        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'bottom'],
         'defaultregion' => 'side-pre',
     ),
 ];
