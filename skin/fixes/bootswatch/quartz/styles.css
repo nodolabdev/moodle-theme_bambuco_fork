@@ -1,0 +1,72 @@
+#region-main {
+    background-color: transparent;
+}
+
+#page.drawers .main-inner {
+    background-color: transparent;
+}
+
+.dashboard-card-deck .dashboard-card {
+    background-color: #fff;
+}
+
+.block_myoverview.block.card {
+    padding: 10px;
+}
+
+.secondary-navigation .navigation,
+.secondary-navigation .navigation .nav-tabs {
+    background-color: transparent;
+}
+
+.moremenu .nav-link:hover, .moremenu .nav-link:focus,
+.moremenu .nav-link.active:focus, .moremenu .nav-link.active:hover {
+    background-color: rgba(0,0,0,.4);
+}
+
+.drawer.drawer-right.show {
+    background-color: transparent;
+}
+
+.list-group-item-primary a,
+.list-group-item-success a {
+    color: var(--bs-list-group-color);
+}
+
+.btn.btn-icon.bg-secondary {
+    background-color: var(--bs-secondary) !important;
+}
+
+.bg-white .form-control,
+.bg-white .form-control:focus {
+    color: var(--bs-dark);
+}
+
+.bg-white .form-inline .input-group {
+    border: 1px solid var(--bs-gray-500);
+    border-radius: 9px;
+}
+
+.form-inline .input-group input {
+    height: 100%;
+}
+
+.editor_atto_content_wrap {
+    background-color: transparent;
+}
+
+.bg-white {
+    color: rgb(var(--bs-dark-rgb));
+}
+
+.drawer.drawer-left {
+    background-color: var(--bs-secondary);
+}
+
+.card-deck .card {
+    backdrop-filter: unset;
+}
+
+.dropdown-menu {
+    backdrop-filter: blur(50px);
+}

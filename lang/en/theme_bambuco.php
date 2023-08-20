@@ -53,6 +53,10 @@ $string['region-intocontent'] = 'Content';
 $string['region-top'] = 'Top';
 $string['region-side-pre'] = 'Right';
 $string['showfooter'] = 'Show footer';
+$string['skin'] = 'Skin';
+$string['skin_desc'] = 'Pick a skin to change the look of the theme. The current skins are based on <a href="https://bootswatch.com/">Bootswatch</a> project. Check the <a href="https://bootswatch.com/">Bootswatch page</a> for examples and more information.';
+$string['skins_none'] = 'No skins are available.';
+$string['skinsettings'] = 'Skin settings';
 $string['unaddableblocks'] = 'Unneeded blocks';
 $string['unaddableblocks_desc'] = 'The blocks specified are not needed when using this theme and will not be listed in the \'Add a block\' menu.';
 $string['privacy:metadata:preference:draweropenblock'] = 'The user\'s preference for hiding or showing the drawer with blocks.';
@@ -62,5 +66,3 @@ $string['privacy:drawerindexclosed'] = 'The current preference for the index dra
 $string['privacy:drawerindexopen'] = 'The current preference for the index drawer is open.';
 $string['privacy:drawerblockclosed'] = 'The current preference for the block drawer is closed.';
 $string['privacy:drawerblockopen'] = 'The current preference for the block drawer is open.';
-
-$string[''] = '';

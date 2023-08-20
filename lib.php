@@ -31,6 +31,7 @@ defined('MOODLE_INTERNAL') || die();
  * @return string
  */
 function theme_bambuco_get_extra_scss($theme) {
+
     $content = '';
     $imageurl = $theme->setting_file_url('backgroundimage', 'backgroundimage');
 
@@ -152,4 +153,23 @@ function theme_bambuco_get_pre_scss($theme) {
     }
 
     return $scss;
+}
+
+/**
+ * Moodle native lib/navigationlib.php calls this hook allowing us to override UI.
+ */
+function theme_bambuco_before_http_headers() {
+    global $PAGE, $CFG;
+
+    $skin = get_config('theme_bambuco', 'skin');
+
+    if (!empty($skin)) {
+        $PAGE->requires->css('/theme/bambuco/skin/bootswatch/dist/' . $skin . '/bootstrap.min.css');
+        $PAGE->requires->css('/theme/bambuco/skin/fixes/bootswatch.css');
+
+        $fixpath = $CFG->dirroot . '/theme/bambuco/skin/fixes/bootswatch/' . $skin . '/styles.css';
+        if (file_exists($fixpath)) {
+            $PAGE->requires->css('/theme/bambuco/skin/fixes/bootswatch/' . $skin . '/styles.css');
+        }
+    }
 }

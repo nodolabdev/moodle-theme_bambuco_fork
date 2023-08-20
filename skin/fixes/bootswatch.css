@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+}
+
+.form-select {
+    --bs-form-select-bg-img: unset;
+    background: transparent;
+    border: unset;
+    padding: 0;
+    border-radius: unset;
+}
+
+.input-group {
+    align-items: baseline;
+}
+
+.simplesearchform .btn-close,
+.simplesearchform .btn-clear {
+    position: absolute;
+    background-image: unset;
+    z-index: 5;
+    top: calc(50% - 15px);
+}
+
+.block_vitrina-courseslist .coursebox.panel {
+    background-color: #fff;
+}
+
+.drawer.drawer-right {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.drawer.drawer-left {
+    background-color: rgba(255, 255, 255, 0.8);
+}
