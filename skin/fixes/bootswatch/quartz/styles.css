@@ -57,6 +57,7 @@
 
 .bg-white {
     color: rgb(var(--bs-dark-rgb));
+    background-color: rgba(var(--bs-white-rgb), 0.5) !important;
 }
 
 .drawer.drawer-left {
@@ -69,4 +70,24 @@
 
 .dropdown-menu {
     backdrop-filter: blur(50px);
+}
+
+.pagelayout-login #page {
+    background: transparent;
+}
+
+.login-container {
+    background-color: #fff3;
+}
+
+.moodle-dialogue-base .moodle-dialogue-wrap {
+    background-color: #a03d6ddd;
+}
+
+.file-picker .fp-content {
+    background: transparent;
+}
+
+.fp-iconview .fp-filename-field .fp-filename {
+    background: #3335;
 }

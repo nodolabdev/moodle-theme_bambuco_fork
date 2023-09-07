@@ -161,6 +161,10 @@ function theme_bambuco_get_pre_scss($theme) {
 function theme_bambuco_before_http_headers() {
     global $PAGE, $CFG;
 
+    if ($PAGE->theme->name != 'bambuco') {
+        return;
+    }
+
     $skin = get_config('theme_bambuco', 'skin');
 
     if (!empty($skin)) {

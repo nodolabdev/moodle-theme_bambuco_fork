@@ -37,3 +37,9 @@ a:hover {
 .drawer.drawer-left {
     background-color: rgba(255, 255, 255, 0.8);
 }
+
+.dropdown-toggle::after {
+    border-top: .5em solid;
+    border-right: .5em solid transparent;
+    border-left: .5em solid transparent;
+}
