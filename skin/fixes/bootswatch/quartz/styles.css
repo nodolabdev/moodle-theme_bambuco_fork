@@ -93,7 +93,7 @@
 }
 
 .block_vitrina-courseslist {
-    background-color: transparent;
+    background-color: transparent!important;
 }
 
 .block_vitrina-courseslist .coursebox.panel {
