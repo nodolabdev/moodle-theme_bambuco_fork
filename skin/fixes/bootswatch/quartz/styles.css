@@ -91,3 +91,15 @@
 .fp-iconview .fp-filename-field .fp-filename {
     background: #3335;
 }
+
+.block_vitrina-courseslist {
+    background-color: transparent;
+}
+
+.block_vitrina-courseslist .coursebox.panel {
+    background-color: #fff5;
+}
+
+.block_vitrina-tabs .icon {
+    filter: brightness(0);
+}
