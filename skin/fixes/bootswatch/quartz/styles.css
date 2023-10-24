@@ -1,3 +1,7 @@
+a {
+    text-decoration: underline;
+}
+
 #region-main {
     background-color: transparent;
 }
@@ -51,6 +55,7 @@
     height: 100%;
 }
 
+.path-mod-assign [data-region="grade-panel"] .fitem.has-popout,
 .editor_atto_content_wrap {
     background-color: transparent;
 }
@@ -102,4 +107,101 @@
 
 .block_vitrina-tabs .icon {
     filter: brightness(0);
+}
+
+.description .course-description-item {
+    background-color: transparent;
+    border: 1px solid;
+}
+
+.course-content .section-summary .section-summary-activities .activity-count {
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.badge-light {
+    color: #000;
+}
+
+.editing .activity-item:hover {
+    background-color: #f5f9fc44;
+    border-color: #aaa;
+}
+
+.btn.btn-icon:hover, .btn.btn-icon:focus {
+    background-color: #e9ecef88;
+}
+
+.collapsible .ftoggler .btn.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons-collapse-expand.collapsed .collapsed-icon {
+    justify-content: center;
+    padding: 0!important;
+}
+
+.tour-actions > ul > li {
+    background-color: #f5f5f555;
+}
+
+.content-item-container.unread {
+    background-color: #f5f5f555;
+}
+
+.path-mod-assign [data-region="grade-panel"],
+.notification-area .content-area,
+.message-app {
+    background-color: #f5f5f555;
+}
+
+.message-app .btn-link:hover,
+.message-app .btn-link:focus {
+    color: #333;
+}
+
+.content-item-container .view-more,
+.popover-region-seeall-text {
+    color: #333;
+}
+
+.navbar-nav .popover-region .icon {
+    color: #333;
+}
+
+a.dimmed,
+a.dimmed:link,
+a.dimmed:visited,
+a.dimmed_text,
+a.dimmed_text:link,
+a.dimmed_text:visited,
+.dimmed_text,
+.dimmed_text a,
+.dimmed_text a:link,
+.dimmed_text a:visited,
+.usersuspended,
+.usersuspended a,
+.usersuspended a:link,
+.usersuspended a:visited,
+.dimmed_category,
+.dimmed_category a {
+    text-shadow: 1px 1px 0px #000;
+}
+
+.path-mod .activity-header:not(:empty) {
+    background: transparent;
+    border: 1px solid;
+}
+
+.block .block-cards a.coursename {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.block .block-cards a.coursename:hover {
+    color: #888;
 }

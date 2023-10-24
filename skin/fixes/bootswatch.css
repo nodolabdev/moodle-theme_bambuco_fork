@@ -43,3 +43,20 @@ a:hover {
     border-right: .5em solid transparent;
     border-left: .5em solid transparent;
 }
+
+.fade.in {
+    opacity: 1;
+}
+
+.list-group.hidden {
+    display: none;
+}
+
+.list-group.show {
+    display: block;
+}
+
+.block-myoverview > div > .row > *,
+.block-timeline > div > .row > * {
+    width: auto;
+}
