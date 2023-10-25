@@ -15,6 +15,9 @@ Package tested in: moodle 4.0+, 4.1+.
 - **GIT:** https://github.com/bambuco/moodle-theme_bambuco
 
 ## IN VERSION ##
+2023012905:
+- New login settings page.
+
 2023012904:
 - Skin feature
 

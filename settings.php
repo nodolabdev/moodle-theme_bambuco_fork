@@ -29,3 +29,4 @@ $settings = new admin_category('theme_bambuco', get_string('configtitle', 'theme
 include(dirname(__FILE__) . '/settings/general.php');
 include(dirname(__FILE__) . '/settings/advanced.php');
 include(dirname(__FILE__) . '/settings/skin.php');
+include(dirname(__FILE__) . '/settings/login.php');

@@ -1,0 +1,27 @@
+.loginform {
+
+    .icon-showform {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: -20px;
+        }
+    }
+
+    .showmore {
+        cursor: pointer;
+    }
+
+    .showmore-transition {
+        transition: all .4s ease-in-out;
+        max-height: 1000px;
+        transform: scale(1);
+    }
+
+    .notshowmore {
+        max-height: 0;
+        overflow: hidden;
+        transform: scale(0);
+    }
+}
