@@ -110,7 +110,10 @@ $THEME->parents = ['boost'];
 $THEME->enable_dock = false;
 $THEME->extrascsscallback = 'theme_bambuco_get_extra_scss';
 $THEME->prescsscallback = 'theme_bambuco_get_pre_scss';
+
+// Only used if SCSS fail: outputlib.php get_css_content function.
 $THEME->precompiledcsscallback = 'theme_bambuco_get_precompiled_css';
+
 $THEME->csspostprocess = 'theme_bambuco_css_postprocess';
 $THEME->yuicssmodules = [];
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';

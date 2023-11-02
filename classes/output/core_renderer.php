@@ -53,8 +53,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $context->sitename = format_string($SITE->fullname, true,
                 ['context' => \context_course::instance(SITEID), "escape" => false]);
 
-        $layout = get_config('theme_bambuco', 'loginformlayout');
-        $context->toexternal = ($layout == 'toexternal');
+        if ($context->hasidentityproviders) {
+            $layout = get_config('theme_bambuco', 'loginformlayout');
+            $context->toexternal = ($layout == 'toexternal');
+        }
 
         return $this->render_from_template('core/loginform', $context);
     }
