@@ -16,6 +16,10 @@ Package tested in: moodle 4.0+, 4.1+.
 
 ## IN VERSION ##
 2023012905:
+- New fonts settings.
+- Included login extra content.
+
+2023012905:
 - New login settings page.
 
 2023012904:
