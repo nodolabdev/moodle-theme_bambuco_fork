@@ -24,28 +24,35 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$page = new admin_settingpage('theme_bambuco_login', get_string('loginsettings', 'theme_bambuco'));
+$page = new admin_settingpage('theme_bambuco_login', new lang_string('loginsettings', 'theme_bambuco'));
 
 if ($ADMIN->fulltree) {
 
     // Login Background image setting.
     $name = 'theme_bambuco/loginbackgroundimage';
-    $title = get_string('loginbackgroundimage', 'theme_bambuco');
-    $description = get_string('loginbackgroundimage_desc', 'theme_bambuco');
+    $title = new lang_string('loginbackgroundimage', 'theme_bambuco');
+    $description = new lang_string('loginbackgroundimage_desc', 'theme_bambuco');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'loginbackgroundimage');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Layout type.
     $options = [
-        'default' => get_string('loginformlayout_default', 'theme_bambuco'),
-        'toexternal' => get_string('loginformlayout_toexternal', 'theme_bambuco')
+        'default' => new lang_string('loginformlayout_default', 'theme_bambuco'),
+        'toexternal' => new lang_string('loginformlayout_toexternal', 'theme_bambuco')
     ];
 
     $name = 'theme_bambuco/loginformlayout';
-    $title = get_string('loginformlayout', 'theme_bambuco');
-    $description = get_string('loginformlayout_desc', 'theme_bambuco');
+    $title = new lang_string('loginformlayout', 'theme_bambuco');
+    $description = new lang_string('loginformlayout_desc', 'theme_bambuco');
     $setting = new admin_setting_configselect($name, $title, $description, 'default', $options);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    $name = 'theme_bambuco/loginmorecontent';
+    $title = new lang_string('loginmorecontent', 'theme_bambuco');
+    $description = new lang_string('loginmorecontent_desc', 'theme_bambuco');
+    $setting = new admin_setting_confightmleditor($name, $title, $description, '');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

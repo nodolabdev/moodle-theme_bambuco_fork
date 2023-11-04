@@ -51,6 +51,11 @@ function theme_bambuco_get_extra_scss($theme) {
         $content .= ' }';
     }
 
+    $font = $theme->settings->fontfamily;
+    if (!empty($font)) {
+        $content .= ' body { font-family: "' . $font . '"; } ';
+    }
+
     // Always return the background image with the scss when we have it.
     return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
 }
@@ -118,6 +123,7 @@ function theme_bambuco_get_main_scss_content($theme) {
  */
 function theme_bambuco_get_precompiled_css() {
     global $CFG;
+
     return file_get_contents($CFG->dirroot . '/theme/boost/style/moodle.css');
 }
 
@@ -175,4 +181,52 @@ function theme_bambuco_before_http_headers() {
             $PAGE->requires->css('/theme/bambuco/skin/fixes/bootswatch/' . $skin . '/styles.css');
         }
     }
+
+}
+
+/**
+ * Include extra fonts.
+ *
+ * @return string The HTML Meta to insert before the head.
+ */
+function theme_bambuco_before_standard_html_head() {
+    global $PAGE, $OUTPUT;
+
+    if ($PAGE->theme->name != 'bambuco') {
+        return;
+    }
+
+    // Included fonts.
+    $font = $PAGE->theme->settings->fontfamily;
+    $otherfontfamily = $PAGE->theme->settings->otherfontfamily;
+
+    if (empty($font) && empty($otherfontfamily)) {
+        return;
+    }
+
+    $headers = [];
+    $headers[] = '<link rel="preconnect" href="https://fonts.googleapis.com">';
+    $headers[] = '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
+
+    $includefonts = [];
+    if (!empty($font)) {
+        $includefonts[] = $font;
+    }
+
+    if (!empty($otherfontfamily)) {
+        $otherfontfamily = explode(',', $otherfontfamily);
+    } else {
+        $otherfontfamily = [];
+    }
+
+    $includefonts = array_merge($includefonts, $otherfontfamily);
+
+    foreach ($includefonts as $font) {
+        $font = str_replace(' ', '+', $font);
+        $headers[] = '<link href="https://fonts.googleapis.com/css2?family='
+                            . $font
+                            . ':wght@400;500;600;700&display=swap" rel="stylesheet">';
+    }
+
+    return implode("\n", $headers);
 }

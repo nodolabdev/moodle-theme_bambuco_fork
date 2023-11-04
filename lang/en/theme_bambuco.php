@@ -31,8 +31,14 @@ $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
 $string['bootswatch'] = 'Bootswatch';
 $string['bootswatch_desc'] = 'A bootswatch is a set of Bootstrap variables and css to style Bootstrap';
-$string['choosereadme'] = 'BambuCo is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
+$string['choosereadme'] = 'BambuCo is a modern highly-customisable theme. This theme is based in the Moodle theme: Boost.';
 $string['configtitle'] = 'BambuCo';
+$string['fontfamily'] = 'Font family';
+$string['fontfamily_desc'] = 'The Google font family to use for the site.
+View more in <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.
+For symbols visit: <a href="https://fonts.google.com/noto/specimen/Noto+Sans+Symbols+2/glyphs?query=Noto+Sans+Symbols+2" target="_blank">Noto Sans Symbols 2 - Glyphs</a>.';
+$string['fontfamily_icons'] = ' (icons)';
+$string['fontfamily_handwriting'] = ' (handwriting)';
 $string['generalsettings'] = 'General settings';
 $string['loginbackgroundimage'] = 'Login page background image';
 $string['loginbackgroundimage_desc'] = 'The image to display as a background for the login page.';
@@ -42,10 +48,15 @@ $string['loginformlayout_default'] = 'Default';
 $string['loginformlayout_toexternal'] = 'To external';
 $string['loginsettings'] = 'Login settings';
 $string['loginmanualtitle'] = 'With username and password';
+$string['loginmorecontent'] = 'More content';
+$string['loginmorecontent_desc'] = 'Additional content to display on the login page.';
 $string['nobootswatch'] = 'None';
+$string['otherfontfamily'] = 'Other font family';
+$string['otherfontfamily_desc'] = 'Other fonts to include in the site. The font is not applied to the site, it is only included in the page.';
 $string['pluginname'] = 'BambuCo';
 $string['presetfiles'] = 'Additional theme preset files';
-$string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href="https://docs.moodle.org/dev/Boost_Presets">Boost presets</a> for information on creating and sharing your own preset files, and see the <a href="https://archive.moodle.net/boost">Presets repository</a> for presets that others have shared.';
+$string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme.
+See <a href="https://docs.moodle.org/dev/Boost_Presets" target="_blanck">Boost presets</a> for information on creating and sharing your own preset files, and see the <a href="https://archive.moodle.net/boost" target="_blanck">Presets repository</a> for presets that others have shared.';
 $string['preset'] = 'Theme preset';
 $string['preset_desc'] = 'Pick a preset to broadly change the look of the theme.';
 $string['privacy:metadata'] = 'The BambuCo theme does not store any personal data about any user.';
@@ -58,9 +69,10 @@ $string['region-bottom'] = 'Bottom';
 $string['region-intocontent'] = 'Content';
 $string['region-top'] = 'Top';
 $string['region-side-pre'] = 'Right';
-$string['showfooter'] = 'Show footer';
 $string['skin'] = 'Skin';
-$string['skin_desc'] = 'Pick a skin to change the look of the theme. The current skins are based on <a href="https://bootswatch.com/">Bootswatch</a> project. Check the <a href="https://bootswatch.com/">Bootswatch page</a> for examples and more information.';
+$string['skin_desc'] = 'Pick a skin to change the look of the theme.
+The current skins are based on <a href="https://bootswatch.com/" target="_blanck">Bootswatch</a> project.
+Check the <a href="https://bootswatch.com/" target="_blanck">Bootswatch page</a> for examples and more information.';
 $string['skins_none'] = 'No skins are available.';
 $string['skinsettings'] = 'Skin settings';
 $string['unaddableblocks'] = 'Unneeded blocks';

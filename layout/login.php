@@ -26,10 +26,20 @@ defined('MOODLE_INTERNAL') || die();
 
 $bodyattributes = $OUTPUT->body_attributes();
 
+$loginmorecontent = get_config('theme_bambuco', 'loginmorecontent');
+$hasmorecontent = false;
+
+if (!empty($loginmorecontent)) {
+    $loginmorecontent = format_text($loginmorecontent, FORMAT_HTML, ['noclean' => true]);
+    $hasmorecontent = true;
+}
+
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
-    'bodyattributes' => $bodyattributes
+    'bodyattributes' => $bodyattributes,
+    'hasmorecontent' => $hasmorecontent,
+    'loginmorecontent' => $loginmorecontent,
 ];
 
 echo $OUTPUT->render_from_template('theme_bambuco/login', $templatecontext);

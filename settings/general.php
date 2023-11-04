@@ -83,5 +83,64 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    $lblhandwriting = get_string('fontfamily_handwriting', 'theme_bambuco');
+    $lblicons = get_string('fontfamily_icons', 'theme_bambuco');
+
+    // Google fonts available.
+    $fonts = [
+        'Agbalumo' => 'Agbalumo',
+        'Caveat' => 'Caveat' . $lblhandwriting,
+        'Dancing Script' => 'Dancing Script' . $lblhandwriting,
+        'Dosis' => 'Dosis',
+        'Droid Sans' => 'Droid Sans',
+        'Edu TAS Begginer' => 'Edu TAS Begginer' . $lblhandwriting,
+        'Exo 2' => 'Exo 2',
+        'Great Vibes' => 'Great Vibes' . $lblhandwriting,
+        'Griffy' => 'Griffy',
+        'Inconsolata' => 'Inconsolata',
+        'Indie Flower' => 'Indie Flower' . $lblhandwriting,
+        'Josefin Sans' => 'Josefin Sans',
+        'Kenia' => 'Kenia',
+        'Lato' => 'Lato',
+        'Lobster' => 'Lobster',
+        'Montserrat' => 'Montserrat',
+        'Noto Sans Symbols 2' => 'Noto Sans Symbols 2' . $lblicons,
+        'Nunito' => 'Nunito',
+        'Open Sans' => 'Open Sans',
+        'Oswald' => 'Oswald',
+        'Pacifico' => 'Pacifico' . $lblhandwriting,
+        'Playpen Sans' => 'Playpen Sans' . $lblhandwriting,
+        'Poppins' => 'Poppins',
+        'Raleway' => 'Raleway',
+        'Roboto' => 'Roboto',
+        'Roboto Condensed' => 'Roboto Condensed',
+        'Roboto Mono' => 'Roboto Mono',
+        'Rubik' => 'Rubik',
+        'Ruge Boogie' => 'Ruge Boogie' . $lblhandwriting,
+        'Sacramento' => 'Sacramento' . $lblhandwriting,
+        'Source Sans Pro' => 'Source Sans Pro',
+        'Space Grotesk' => 'Space Grotesk',
+        'Splash' => 'Splash' . $lblhandwriting,
+        'Tangerine' => 'Tangerine' . $lblhandwriting,
+        'Ubuntu' => 'Ubuntu',
+        'Zeyada' => 'Zeyada' . $lblhandwriting,
+    ];
+
+    // Font family to apply to the site.
+    $name = 'theme_bambuco/fontfamily';
+    $title = get_string('fontfamily', 'theme_bambuco');
+    $description = get_string('fontfamily_desc', 'theme_bambuco');
+    $setting = new admin_setting_configselect($name, $title, $description, '', [''] + $fonts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Other fonts to include.
+    $name = 'theme_bambuco/otherfontfamily';
+    $title = get_string('otherfontfamily', 'theme_bambuco');
+    $description = get_string('otherfontfamily_desc', 'theme_bambuco');
+    $setting = new admin_setting_configmultiselect($name, $title, $description, [], $fonts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
 }
 $settings->add('theme_bambuco', $page);

@@ -227,28 +227,32 @@
         </div>
     {{/hasidentityproviders}}
 {{/toexternal}}
+    {{#canloginasguest}}
+        <div class="login-divider"></div>
+        <div class="someallowguest">
+            <h2 class="login-heading">{{#str}}someallowguest{{/str}}</h2>
+            <form action="{{loginurl}}" method="post" id="guestlogin">
+                <input type="hidden" name="logintoken" value="{{logintoken}}">
+                <input type="hidden" name="username" value="guest" />
+                <input type="hidden" name="password" value="guest" />
+                <button class="btn btn-secondary" type="submit" id="loginguestbtn">{{#str}}loginguest{{/str}}</button>
+            </form>
+        </div>
+    {{/canloginasguest}}
     {{#hasinstructions}}
         <div class="login-divider"></div>
-        <div class="login-instructions {{#cansignup}}mb-3{{/cansignup}}">
-            <h2 class="login-heading">{{#str}}firsttime{{/str}}</h2>
-            {{{instructions}}}
+        <div class="hasinstructions">
+            <div class="login-instructions {{#cansignup}}mb-3{{/cansignup}}">
+                {{{instructions}}}
+            </div>
         </div>
     {{/hasinstructions}}
     {{#cansignup}}
         <div class="login-signup">
+            <h2 class="login-heading">{{#str}}firsttime{{/str}}</h2>
             <a class="btn btn-secondary" href="{{signupurl}}">{{#str}}startsignup{{/str}}</a>
         </div>
     {{/cansignup}}
-    {{#canloginasguest}}
-        <div class="login-divider"></div>
-        <h2 class="login-heading">{{#str}}someallowguest{{/str}}</h2>
-        <form action="{{loginurl}}" method="post" id="guestlogin">
-            <input type="hidden" name="logintoken" value="{{logintoken}}">
-            <input type="hidden" name="username" value="guest" />
-            <input type="hidden" name="password" value="guest" />
-            <button class="btn btn-secondary" type="submit" id="loginguestbtn">{{#str}}loginguest{{/str}}</button>
-        </form>
-    {{/canloginasguest}}
     <div class="login-divider"></div>
     <div class="d-flex">
         {{#languagemenu}}
