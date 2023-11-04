@@ -31,7 +31,7 @@ $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
 $string['bootswatch'] = 'Bootswatch';
 $string['bootswatch_desc'] = 'A bootswatch is a set of Bootstrap variables and css to style Bootstrap';
-$string['choosereadme'] = 'BambuCo is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
+$string['choosereadme'] = 'BambuCo is a modern highly-customisable theme. This theme is based in the Moodle theme: Boost.';
 $string['configtitle'] = 'BambuCo';
 $string['fontfamily'] = 'Font family';
 $string['fontfamily_desc'] = 'The Google font family to use for the site.
@@ -69,7 +69,6 @@ $string['region-bottom'] = 'Bottom';
 $string['region-intocontent'] = 'Content';
 $string['region-top'] = 'Top';
 $string['region-side-pre'] = 'Right';
-$string['showfooter'] = 'Show footer';
 $string['skin'] = 'Skin';
 $string['skin_desc'] = 'Pick a skin to change the look of the theme.
 The current skins are based on <a href="https://bootswatch.com/" target="_blanck">Bootswatch</a> project.
