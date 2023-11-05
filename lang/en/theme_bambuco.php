@@ -69,6 +69,9 @@ $string['region-bottom'] = 'Bottom';
 $string['region-intocontent'] = 'Content';
 $string['region-top'] = 'Top';
 $string['region-side-pre'] = 'Right';
+$string['signup'] = 'Sign up';
+$string['signuplink'] = 'Show signup link';
+$string['signuplink_desc'] = 'Show a link to the signup page in the usermenu bar.';
 $string['skin'] = 'Skin';
 $string['skin_desc'] = 'Pick a skin to change the look of the theme.
 The current skins are based on <a href="https://bootswatch.com/" target="_blanck">Bootswatch</a> project.

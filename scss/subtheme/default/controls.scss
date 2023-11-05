@@ -1,0 +1,42 @@
+// BbCo control: show the content when hovering over.
+[data-control="bbco-contenthover"] {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    padding: 30px 0 0 30px;
+    position: relative;
+}
+
+[data-control="bbco-contenthover"]::before {
+    content: "\f05a";
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[data-control="bbco-contenthover"]:hover {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid;
+    transition: all 0.05s ease-in-out;
+    right: 0;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #888;
+}
+
+[data-control="bbco-contenthover"]:hover::before {
+    display: none;
+}

@@ -28,6 +28,14 @@ $page = new admin_settingpage('theme_bambuco_login', new lang_string('loginsetti
 
 if ($ADMIN->fulltree) {
 
+    // Include signup link in usermenu bar.
+    $name = 'theme_bambuco/signuplink';
+    $title = new lang_string('signuplink', 'theme_bambuco');
+    $description = new lang_string('signuplink_desc', 'theme_bambuco');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, '0');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Login Background image setting.
     $name = 'theme_bambuco/loginbackgroundimage';
     $title = new lang_string('loginbackgroundimage', 'theme_bambuco');

@@ -69,6 +69,9 @@ $string['region-bottom'] = 'Abajo';
 $string['region-intocontent'] = 'En el contenido';
 $string['region-top'] = 'Arriba';
 $string['region-side-pre'] = 'Derecha';
+$string['signup'] = 'Registrarse';
+$string['signuplink'] = 'Enlace de registro';
+$string['signuplink_desc'] = 'Mostrar un enlace a la página de registro en la barra del menú de usuario.';
 $string['skin'] = 'Máscara';
 $string['skin_desc'] = 'Elija una máscara para cambiar el aspecto del tema.
 Las opciones actuales se basan en el proyecto <a href="https://bootswatch.com/" target="_blanck">Bootswatch</a>.
