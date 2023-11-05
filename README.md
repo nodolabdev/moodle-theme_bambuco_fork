@@ -15,7 +15,11 @@ Package tested in: moodle 4.0+, 4.1+.
 - **GIT:** https://github.com/bambuco/moodle-theme_bambuco
 
 ## IN VERSION ##
-2023012905:
+2023012907:
+- New setting: show signup link.
+- Start BbCo controls with "contenthover".
+
+2023012906:
 - New fonts settings.
 - Included login extra content.
 
