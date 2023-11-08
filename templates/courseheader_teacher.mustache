@@ -1,0 +1,49 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_bambuco/courseheader_teacher
+
+    This template renders the course header with teacher information.
+
+    Example context (json):
+    {
+        "hasteachers": true,
+        "teachers": [
+            {
+                "image": "<img src=\"http://localhost/moodle/theme/image.php/essential/core/1470127868/u/f1\" alt=\"\" class=\"userpicture defaultuserpic\" width=\"100\" height=\"100\" />",
+                "name": "Teacher 1",
+                "enrichedname": "<span>Teacher</span> <span>1</span>",
+                "url": "http://localhost/moodle/user/view.php?id=2"
+            }
+        ]
+    }
+}}
+
+{{#hasteachers}}
+    <div class="courseheader_teachers">
+        {{#teachers}}
+            <div>
+                <div class="picture">
+                    {{{image}}}
+                </div>
+                <div class="detail">
+                    <a href="{{url}}">{{{enrichedname}}}</a>
+                </div>
+            </div>
+        {{/teachers}}
+    </div>
+{{/hasteachers}}
