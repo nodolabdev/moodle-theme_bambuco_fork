@@ -61,4 +61,124 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $this->render_from_template('core/loginform', $context);
     }
 
+    /**
+      * Renders the header bar.
+      *
+      * @param \context_header $contextheader Header bar object.
+      * @return string HTML for the header bar.
+      */
+    protected function render_context_header(\context_header $contextheader) {
+        global $DB;
+
+        // Course header customization.
+        $config = get_config('theme_bambuco');
+        $inpage = false;
+
+        $html = parent::render_context_header($contextheader);
+
+        $inpage = \theme_bambuco\utils::use_custom_header();
+
+        if ($inpage) {
+
+            $course = $this->page->course;
+
+            if ($course) {
+
+                if (!($config->coursesheader == 'default')) {
+                    if ($config->coursesheader == 'none') {
+                        return '';
+                    }
+
+                    $outputclass = '\\theme_bambuco\\output\\courseheader\\' . $config->coursesheader;
+                    $headermanager = new $outputclass($course);
+                    $courseheaderdata = $headermanager->export_for_template($this);
+
+                    $html .= $this->render_from_template('theme_bambuco/courseheader_' . $config->coursesheader, $courseheaderdata);
+                }
+
+                if (!empty($config->coursemenu)) {
+                    $context = $this->page->context;
+
+                    $menudata = [
+                        'options' => []
+                    ];
+                    $options = explode("\n", $config->coursemenu);
+
+                    foreach ($options as $option) {
+                        $one = explode('|', $option);
+
+                        if (count($one) != 6) {
+                            continue;
+                        }
+
+                        if ($one[0] == '*' || has_capability($one[0], $context)) {
+
+                            $item = new \stdClass();
+                            $item->target = trim($one[3]);
+                            $item->name = trim($one[4]);
+                            $item->cssclass = trim($one[5]);
+
+                            if ($one[1] == 'url') {
+                                $url = str_replace('{courseid}', $course->id, $one[2]);
+
+                                if (substr($url, 0, 1) == '/') {
+                                    $item->url = new \moodle_url($url);
+                                } else {
+                                    $item->url = $url;
+                                }
+                            } else if (substr($one[1], 0, 4) == 'mod_') {
+                                $modulename = substr($one[1], 4, strlen($one[1]) - 4);
+
+                                if (!empty($one[2])) {
+                                    $instance = $DB->get_records($modulename, ['course' => $course->id]);
+
+                                    if (!$instance || count($instance) == 0) {
+                                        continue;
+                                    }
+
+                                    $instance = reset($instance);
+
+                                    if (empty($item->name) && property_exists($instance, 'name')) {
+                                        $item->name = $instance->name;
+                                    }
+
+                                    $cm = get_coursemodule_from_instance($modulename, $instance->id, $course->id);
+
+                                    $item->url = new \moodle_url('/mod/' . $modulename . '/view.php', array('id' => $cm->id));
+
+                                } else {
+                                    $item->url = new \moodle_url('/mod/' . $modulename . '/index.php', array('id' => $course->id));
+                                }
+                            }
+
+                            $menudata['options'][] = $item;
+
+                        }
+                    }
+
+                    if (!empty($menudata['options'])) {
+                        $html .= $this->render_from_template('theme_bambuco/bbcocoursemenu', $menudata);
+                    }
+                }
+            }
+
+        }
+
+        return $html;
+    }
+
+    /**
+     * Outputs a heading
+     *
+     * @param string $text The text of the heading
+     * @param int $level The level of importance of the heading. Defaulting to 2
+     * @param string $classes A space-separated list of CSS classes. Defaulting to null
+     * @param string $id An optional ID
+     * @return string the HTML to output.
+     */
+    public function heading($text, $level = 2, $classes = null, $id = null) {
+        $text = \theme_bambuco\utils::wrap_text($text);
+        return parent::heading($text, $level, $classes, $id);
+    }
+
 }

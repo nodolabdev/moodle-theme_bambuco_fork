@@ -68,10 +68,35 @@ $hasblocksbottom = strpos($blocksbottomhtml, 'data-block=') !== false;
 $blockscontenthtml = $OUTPUT->blocks('intocontent');
 $hasblockscontent = strpos($blockscontenthtml, 'data-block=') !== false;
 
+$blocksbelowhtml = $OUTPUT->blocks('below');
+$hasblocksbelow = strpos($blocksbelowhtml, 'data-block=') !== false;
+
 $courseindex = core_course_drawer();
 if (!$courseindex) {
     $courseindexopen = false;
 }
+
+// Course header customization.
+$config = get_config('theme_bambuco');
+
+if ($config->coursesheader != 'none') {
+    $inpage = \theme_bambuco\utils::use_custom_header();
+
+    if ($inpage) {
+        $extraclasses[] = 'courseheader-custom';
+        $extraclasses[] = 'course-header-' . $config->coursesheader;
+
+        if (!empty($config->coursemenu)) {
+            $extraclasses[] = 'course-header-withmenu';
+        }
+
+        if (!empty($config->courseheaderlayout) && $config->courseheaderlayout == 'fullwidth') {
+            $extraclasses[] = 'course-header-fullwidth';
+        }
+    }
+}
+
+// End Course header customization.
 
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $forceblockdraweropen = $OUTPUT->firstview_fakeblocks();
@@ -111,6 +136,8 @@ $templatecontext = [
     'hasblocksbottom' => $hasblocksbottom,
     'blockscontent' => $blockscontenthtml,
     'hasblockscontent' => $hasblockscontent,
+    'blocksbelow' => $blocksbelowhtml,
+    'hasblocksbelow' => $hasblocksbelow,
     'bodyattributes' => $bodyattributes,
     'courseindexopen' => $courseindexopen,
     'blockdraweropen' => $blockdraweropen,
@@ -125,7 +152,8 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'overflow' => $overflow,
     'headercontent' => $headercontent,
-    'addblockbutton' => $addblockbutton
+    'addblockbutton' => $addblockbutton,
+    'customcategorybanner' => \theme_bambuco\utils::get_coursefooterimage($PAGE->course),
 ];
 
 echo $OUTPUT->render_from_template('theme_bambuco/drawers', $templatecontext);

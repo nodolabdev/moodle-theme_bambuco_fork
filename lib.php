@@ -73,8 +73,9 @@ function theme_bambuco_get_extra_scss($theme) {
  * @return bool
  */
 function theme_bambuco_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
-    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage' ||
-        $filearea === 'loginbackgroundimage')) {
+    if ($context->contextlevel == CONTEXT_SYSTEM
+            && (in_array($filearea, ['logo', 'backgroundimage', 'loginbackgroundimage', 'courseheaderimagefile']))) {
+
         $theme = theme_config::load('bambuco');
         // By default, theme files must be cache-able by both browsers and proxies.
         if (!array_key_exists('cacheability', $options)) {
@@ -190,11 +191,13 @@ function theme_bambuco_before_http_headers() {
  * @return string The HTML Meta to insert before the head.
  */
 function theme_bambuco_before_standard_html_head() {
-    global $PAGE, $OUTPUT;
+    global $PAGE;
 
     if ($PAGE->theme->name != 'bambuco') {
         return;
     }
+
+    $config = get_config('theme_bambuco');
 
     // Included fonts.
     $font = $PAGE->theme->settings->fontfamily;
@@ -226,6 +229,16 @@ function theme_bambuco_before_standard_html_head() {
         $headers[] = '<link href="https://fonts.googleapis.com/css2?family='
                             . $font
                             . ':wght@400;500;600;700&display=swap" rel="stylesheet">';
+    }
+
+    // Course header.
+    if ($config->coursesheader != 'none') {
+
+        $inpage = \theme_bambuco\utils::use_custom_header();
+        if ($inpage) {
+            $coursebanner = \theme_bambuco\utils::get_courseimage($PAGE->course);
+            $headers[] = '<style>#page-header { background-image: url("' . $coursebanner . '"); }</style>';
+        }
     }
 
     return implode("\n", $headers);

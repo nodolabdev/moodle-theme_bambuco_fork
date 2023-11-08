@@ -27,12 +27,52 @@ defined('MOODLE_INTERNAL') || die();
 $string['advancedsettings'] = 'Advanced settings';
 $string['backgroundimage'] = 'Background image';
 $string['backgroundimage_desc'] = 'The image to display as a background of the site. The background image you upload here will override the background image in your theme preset files.';
+$string['bannerbycategory'] = 'Banner by category';
+$string['bannerbycategory_desc'] = 'Display a buttom banner image in the course page based on the course category.
+Use the structure: categoryid|bannerurl';
 $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
 $string['bootswatch'] = 'Bootswatch';
 $string['bootswatch_desc'] = 'A bootswatch is a set of Bootstrap variables and css to style Bootstrap';
 $string['choosereadme'] = 'BambuCo is a modern highly-customisable theme. This theme is based in the Moodle theme: Boost.';
 $string['configtitle'] = 'BambuCo';
+$string['coursessettings'] = 'Courses settings';
+$string['coursesheader'] = 'Courses header';
+$string['coursesheader_desc'] = 'The header to display in the courses page.';
+$string['coursesheader_default'] = 'Default';
+$string['coursesheader_none'] = 'None';
+$string['coursesheader_teacher'] = 'Teacher';
+$string['courseheaderimage'] = 'Use the course header image';
+$string['courseheaderimage_desc'] = 'Use a image in the course page header.';
+$string['courseheaderimage_default'] = 'Configured image';
+$string['courseheaderimage_none'] = 'None';
+$string['courseheaderimage_overview'] = 'Course overview (configured if not exist)';
+$string['courseheaderimage_overviewonly'] = 'Course overview (only if exist)';
+$string['courseheaderimagefile'] = 'Header image file';
+$string['courseheaderimagefile_desc'] = 'The image to display by default in the course header.';
+$string['courseheaderimagetype'] = 'Header image type';
+$string['courseheaderimagetype_desc'] = 'The type of image to display in the courses banner when the course don\t have a overview image.';
+$string['courseheaderimagetype_default'] = 'Theme image';
+$string['courseheaderimagetype_generated'] = 'Random generated texture';
+$string['courseheaderlayout'] = 'Header layout';
+$string['courseheaderlayout_desc'] = 'The layout of the course header.';
+$string['courseheaderlayout_default'] = 'Default';
+$string['courseheaderlayout_fullwidth'] = 'Full width';
+$string['courseheaderview'] = 'Header view';
+$string['courseheaderview_block'] = 'Content block pages';
+$string['courseheaderview_course'] = 'Course index';
+$string['courseheaderview_desc'] = 'Context to voew header.';
+$string['courseheaderview_mod'] = 'Activity';
+$string['courseheaderview_my'] = 'My courses';
+$string['courseheaderview_report'] = 'Report';
+$string['courseheaderview_user'] = 'User profile';
+$string['coursemenu'] = 'Course menu';
+$string['coursemenu_desc'] = 'Use the structure: capability|type|link|target|label|cssclass.<br />
+- capability can be * to all users.<br />
+- types available: url or mod_modulename (mod_forum, mod_assign, mod_quiz and others)<br />
+- link can use {courseid} as a key. If type is mod_* can be "firstchild" for display only the first child. If type is url can be a relative or absolute url.<br />
+- link target: _blank, _self or other anchor target option, can be empty to<br />
+- firstchild: true or false';
 $string['fontfamily'] = 'Font family';
 $string['fontfamily_desc'] = 'The Google font family to use for the site.
 View more in <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.
@@ -65,6 +105,7 @@ $string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will
 $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 $string['region-above'] = 'Above';
+$string['region-below'] = 'Below content';
 $string['region-bottom'] = 'Bottom';
 $string['region-intocontent'] = 'Content';
 $string['region-top'] = 'Top';
