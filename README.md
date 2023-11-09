@@ -16,7 +16,7 @@ Package tested in: moodle 4.0+, 4.1+.
 
 ## IN VERSION ##
 2023012908:
-- Course header settings.
+- Course settings.
 - New 'below' blocks section.
 
 2023012907:

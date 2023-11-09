@@ -116,10 +116,10 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Custom banner by category.
-    $name = 'theme_bambuco/bannerbycategory';
-    $title = new lang_string('bannerbycategory', 'theme_bambuco');
-    $description = new lang_string('bannerbycategory_desc', 'theme_bambuco');
+    // Custom content by category.
+    $name = 'theme_bambuco/contentbycategory';
+    $title = new lang_string('contentbycategory', 'theme_bambuco');
+    $description = new lang_string('contentbycategory_desc', 'theme_bambuco');
     $default = '';
     $setting = new admin_setting_configtextarea($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');

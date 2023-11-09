@@ -190,13 +190,16 @@
             {{/hasblocksbelow}}
         </div>
 
-        {{#customcategorybanner}}
-            {{#src}}
-            <div class="customcategorybanner">
-                <img src="{{src}}" alt="{{name}}" title="{{name}}" />
+        {{#coursefooter}}
+            <div class="coursefooter">
+                {{#src}}
+                    <img src="{{src}}" alt="{{name}}" title="{{name}}" />
+                {{/src}}
+                {{#content}}
+                    {{{content}}}
+                {{/content}}
             </div>
-            {{/src}}
-        {{/customcategorybanner}}
+        {{/coursefooter}}
 
         {{#hasblocksbottom}}
             <div class="d-print-none">

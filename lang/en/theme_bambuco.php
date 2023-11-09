@@ -27,9 +27,9 @@ defined('MOODLE_INTERNAL') || die();
 $string['advancedsettings'] = 'Advanced settings';
 $string['backgroundimage'] = 'Background image';
 $string['backgroundimage_desc'] = 'The image to display as a background of the site. The background image you upload here will override the background image in your theme preset files.';
-$string['bannerbycategory'] = 'Banner by category';
-$string['bannerbycategory_desc'] = 'Display a buttom banner image in the course page based on the course category.
-Use the structure: categoryid|bannerurl';
+$string['contentbycategory'] = 'Content by category';
+$string['contentbycategory_desc'] = 'Display content or a image in the course page based on the course category.
+Use the structure (one by line): categoryid|imageurlorcontent';
 $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
 $string['bootswatch'] = 'Bootswatch';

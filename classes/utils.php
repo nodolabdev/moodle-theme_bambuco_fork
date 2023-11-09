@@ -126,42 +126,47 @@ class utils {
      * Get the course footer image.
      *
      * @param \stdClass $course Course object.
-     * @return \stdClass Image object: src and name properties.
+     * @return \stdClass Object: {content} or {src, name} properties.
      */
-    public static function get_coursefooterimage($course) : ?object {
+    public static function get_coursefooter($course) : ?object {
         global $DB;
 
         $config = get_config('theme_bambuco');
+        $coursefooter = null;
 
-        if (empty($config->bannerbycategory) || $course->id == SITEID) {
-            return null;
-        }
+        // Content by category.
+        if (!empty($config->contentbycategory) && $course->id != SITEID) {
 
-        $category = $DB->get_record('course_categories', ['id' => $course->category]);
+            $category = $DB->get_record('course_categories', ['id' => $course->category]);
 
-        if (!$category) {
-            return null;
-        }
+            if ($category) {
+                $lines = explode("\n", $config->contentbycategory);
 
-        $images = explode("\n", $config->bannerbycategory);
+                foreach ($lines as $line) {
+                    $options = explode('|', $line);
 
-        $customcategorybanner = null;
-        foreach ($images as $image) {
-            $options = explode('|', $image);
+                    if (count($options) != 2) {
+                        continue;
+                    }
 
-            if (count($options) != 2) {
-                continue;
+                    $parentid = $options[0];
+                    if ($category->id == $parentid || strpos($category->path, "/{$parentid}/") !== false) {
+                        $coursefooter = new \stdClass();
+
+                        if (strpos($options[1], 'http') !== false) {
+                            $coursefooter->src = $options[1];
+                            $coursefooter->name = $category->name;
+                            break;
+                        } else {
+                            $coursefooter->content = format_text($options[1], FORMAT_HTML,
+                                                    ['context' => \context_course::instance($course->id)]);
+                            break;
+                        }
+                    }
+                }
             }
-
-            $parentid = $options[0];
-            if ($category->id == $parentid || strpos($category->path, "/{$parentid}/") !== false) {
-                $customcategorybanner = new \stdClass();
-                $customcategorybanner->src = $options[1];
-                $customcategorybanner->name = $category->name;
-                break;
-            }
         }
 
-        return $customcategorybanner;
+        return $coursefooter;
     }
 }

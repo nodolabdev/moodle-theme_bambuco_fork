@@ -153,7 +153,7 @@ $templatecontext = [
     'overflow' => $overflow,
     'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton,
-    'customcategorybanner' => \theme_bambuco\utils::get_coursefooterimage($PAGE->course),
+    'coursefooter' => \theme_bambuco\utils::get_coursefooter($PAGE->course),
 ];
 
 echo $OUTPUT->render_from_template('theme_bambuco/drawers', $templatecontext);
