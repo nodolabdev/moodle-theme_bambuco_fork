@@ -182,7 +182,21 @@
                     {{/hasblockscontent}}
                 </div>
             </div>
+
+            {{#hasblocksbelow}}
+                <div class="d-print-none">
+                    {{{ blocksbelow }}}
+                </div>
+            {{/hasblocksbelow}}
         </div>
+
+        {{#customcategorybanner}}
+            {{#src}}
+            <div class="customcategorybanner">
+                <img src="{{src}}" alt="{{name}}" title="{{name}}" />
+            </div>
+            {{/src}}
+        {{/customcategorybanner}}
 
         {{#hasblocksbottom}}
             <div class="d-print-none">

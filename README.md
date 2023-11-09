@@ -17,7 +17,7 @@ Package tested in: moodle 4.0+, 4.1+.
 ## IN VERSION ##
 2023012907:
 - New setting: show signup link.
-- Start BbCo controls with "contenthover".
+- BbCo controls: "contenthover".
 
 2023012906:
 - New fonts settings.

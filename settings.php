@@ -30,3 +30,4 @@ include(dirname(__FILE__) . '/settings/general.php');
 include(dirname(__FILE__) . '/settings/advanced.php');
 include(dirname(__FILE__) . '/settings/skin.php');
 include(dirname(__FILE__) . '/settings/login.php');
+include(dirname(__FILE__) . '/settings/courses.php');
