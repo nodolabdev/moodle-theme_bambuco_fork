@@ -15,6 +15,10 @@ Package tested in: moodle 4.0+, 4.1+.
 - **GIT:** https://github.com/bambuco/moodle-theme_bambuco
 
 ## IN VERSION ##
+2023012908:
+- Course header settings.
+- New 'below' blocks section.
+
 2023012907:
 - New setting: show signup link.
 - BbCo controls: "contenthover".
