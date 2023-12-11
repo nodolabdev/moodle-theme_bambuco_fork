@@ -53,9 +53,10 @@ $THEME->layouts = [
         'defaultregion' => 'side-pre',
     ],
     // Part of course, typical for modules - default page layout if $cm specified in require_login().
+    // side-pre must be the first because it is the one used as a fake block position in questionnaires.
     'incourse' => [
         'file' => 'drawers.php',
-        'regions' => ['above', 'top', 'intocontent', 'side-pre', 'below', 'bottom'],
+        'regions' => ['side-pre', 'above', 'top', 'intocontent', 'below', 'bottom'],
         'defaultregion' => 'side-pre',
     ],
     // The site home page.

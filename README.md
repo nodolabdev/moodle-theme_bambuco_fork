@@ -15,6 +15,10 @@ Package tested in: moodle 4.0+, 4.1+.
 - **GIT:** https://github.com/bambuco/moodle-theme_bambuco
 
 ## IN VERSION ##
+2023012909:
+- Course header position
+- Course header basic style
+
 2023012908:
 - Course settings.
 - New 'below' blocks section.

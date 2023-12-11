@@ -8,6 +8,8 @@ body.courseheader-custom {
         background-position: center center;
         background-size: cover;
         padding-bottom: 10px;
+        position: relative;
+        padding-top: 50px;
 
         .page-context-header {
             background-color: #fff8;
@@ -111,7 +113,7 @@ body.courseheader-custom {
     body.courseheader-custom {
         &.course-header-fullwidth {
 
-            #page.drawers .main-inner {
+            #page.drawers {
                 padding-top: 15vw;
             }
 

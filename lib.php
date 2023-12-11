@@ -232,7 +232,7 @@ function theme_bambuco_before_standard_html_head() {
     }
 
     // Course header.
-    if ($config->coursesheader != 'none') {
+    if (!in_array($config->coursesheader, ['none', 'default'])) {
 
         $inpage = \theme_bambuco\utils::use_custom_header();
         if ($inpage) {

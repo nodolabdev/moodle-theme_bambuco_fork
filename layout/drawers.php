@@ -154,6 +154,8 @@ $templatecontext = [
     'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton,
     'coursefooter' => \theme_bambuco\utils::get_coursefooter($PAGE->course),
+    'courseheaderintop' => $config->coursesheaderposition == 'top',
+    'courseheaderincontent' => $config->coursesheaderposition == 'content',
 ];
 
 echo $OUTPUT->render_from_template('theme_bambuco/drawers', $templatecontext);

@@ -27,21 +27,22 @@ defined('MOODLE_INTERNAL') || die();
 $string['advancedsettings'] = 'Advanced settings';
 $string['backgroundimage'] = 'Background image';
 $string['backgroundimage_desc'] = 'The image to display as a background of the site. The background image you upload here will override the background image in your theme preset files.';
-$string['contentbycategory'] = 'Content by category';
-$string['contentbycategory_desc'] = 'Display content or a image in the course page based on the course category.
-Use the structure (one by line): categoryid|imageurlorcontent';
 $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
 $string['bootswatch'] = 'Bootswatch';
 $string['bootswatch_desc'] = 'A bootswatch is a set of Bootstrap variables and css to style Bootstrap';
 $string['choosereadme'] = 'BambuCo is a modern highly-customisable theme. This theme is based in the Moodle theme: Boost.';
 $string['configtitle'] = 'BambuCo';
+$string['contentbycategory'] = 'Content by category';
+$string['contentbycategory_desc'] = 'Display content or a image in the course page based on the course category.
+Use the structure (one by line): categoryid|imageurlorcontent';
 $string['coursessettings'] = 'Courses settings';
 $string['coursesheader'] = 'Courses header';
 $string['coursesheader_desc'] = 'The header to display in the courses page.';
 $string['coursesheader_default'] = 'Default';
 $string['coursesheader_none'] = 'None';
 $string['coursesheader_teacher'] = 'Teacher';
+$string['coursesheader_basic'] = 'Basic';
 $string['courseheaderimage'] = 'Use the course header image';
 $string['courseheaderimage_desc'] = 'Use a image in the course page header.';
 $string['courseheaderimage_default'] = 'Configured image';
@@ -58,10 +59,14 @@ $string['courseheaderlayout'] = 'Header layout';
 $string['courseheaderlayout_desc'] = 'The layout of the course header.';
 $string['courseheaderlayout_default'] = 'Default';
 $string['courseheaderlayout_fullwidth'] = 'Full width';
+$string['coursesheaderposition'] = 'Courses header position';
+$string['coursesheaderposition_desc'] = 'The position of the courses header.';
+$string['coursesheaderposition_top'] = 'In top';
+$string['coursesheaderposition_content'] = 'In content';
 $string['courseheaderview'] = 'Header view';
 $string['courseheaderview_block'] = 'Content block pages';
 $string['courseheaderview_course'] = 'Course index';
-$string['courseheaderview_desc'] = 'Context to voew header.';
+$string['courseheaderview_desc'] = 'Context to customize the header.';
 $string['courseheaderview_mod'] = 'Activity';
 $string['courseheaderview_my'] = 'My courses';
 $string['courseheaderview_report'] = 'Report';
@@ -71,8 +76,7 @@ $string['coursemenu_desc'] = 'Use the structure: capability|type|link|target|lab
 - capability can be * to all users.<br />
 - types available: url or mod_modulename (mod_forum, mod_assign, mod_quiz and others)<br />
 - link can use {courseid} as a key. If type is mod_* can be "firstchild" for display only the first child. If type is url can be a relative or absolute url.<br />
-- link target: _blank, _self or other anchor target option, can be empty to<br />
-- firstchild: true or false';
+- link target: _blank, _self or other anchor target option, can be empty too';
 $string['fontfamily'] = 'Font family';
 $string['fontfamily_desc'] = 'The Google font family to use for the site.
 View more in <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.

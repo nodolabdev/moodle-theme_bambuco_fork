@@ -28,10 +28,24 @@ $page = new admin_settingpage('theme_bambuco_courses', new lang_string('coursess
 
 if ($ADMIN->fulltree) {
 
+    // Header position.
+    $options = [
+        'top' => new lang_string('coursesheaderposition_top', 'theme_bambuco'),
+        'content' => new lang_string('coursesheaderposition_content', 'theme_bambuco'),
+    ];
+
+    $name = 'theme_bambuco/coursesheaderposition';
+    $title = new lang_string('coursesheaderposition', 'theme_bambuco');
+    $description = new lang_string('coursesheaderposition_desc', 'theme_bambuco');
+    $setting = new admin_setting_configselect($name, $title, $description, 'top', $options);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Header type.
     $options = [
         'default' => new lang_string('coursesheader_default', 'theme_bambuco'),
         'none' => new lang_string('coursesheader_none', 'theme_bambuco'),
+        'basic' => new lang_string('coursesheader_basic', 'theme_bambuco'),
         'teacher' => new lang_string('coursesheader_teacher', 'theme_bambuco')
     ];
 

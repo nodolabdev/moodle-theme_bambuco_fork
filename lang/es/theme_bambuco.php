@@ -33,6 +33,50 @@ $string['bootswatch'] = 'Bootswatch';
 $string['bootswatch_desc'] = 'Bootswatch es un conjunto de variables y CSS que personaliza Bootstrap';
 $string['choosereadme'] = 'BambuCo es un tema moderno altamente personalizable. Este tema está basado en el tema de Moodle: Boost.';
 $string['configtitle'] = 'BambuCo';
+$string['contentbycategory'] = 'Contenido por categoría';
+$string['contentbycategory_desc'] = 'Mostrar contenido o una imagen en la página del curso basado en la categoría del curso.
+Use la estructura (una por línea): iddecategoría|contenidoourldeimagen';
+$string['coursessettings'] = 'Configuración de cursos';
+$string['coursesheader'] = 'Encabezado de cursos';
+$string['coursesheader_desc'] = 'El encabezado para mostrar en la página de cursos.';
+$string['coursesheader_default'] = 'Predeterminado';
+$string['coursesheader_none'] = 'Ninguno';
+$string['coursesheader_teacher'] = 'Profesor';
+$string['coursesheader_basic'] = 'Básico';
+$string['courseheaderimage'] = 'Usar la imagen del encabezado del curso';
+$string['courseheaderimage_desc'] = 'Usar una imagen en el encabezado de la página del curso';
+$string['courseheaderimage_default'] = 'Imagen configurada';
+$string['courseheaderimage_none'] = 'Ninguna';
+$string['courseheaderimage_overview'] = 'Imagen del curso (la configurada si no existe una del curso)';
+$string['courseheaderimage_overviewonly'] = 'Imagen del curso (sólo si existe)';
+$string['courseheaderimagefile'] = 'Archivo de imagen del encabezado';
+$string['courseheaderimagefile_desc'] = 'La imagen que se mostrará de forma predeterminada en el encabezado del curso.';
+$string['courseheaderimagetype'] = 'Tipo de imagen del encabezado';
+$string['courseheaderimagetype_desc'] = 'El tipo de imagen que se mostrará en el banner de los cursos cuando el curso no tenga una imagen de descripción general.';
+$string['courseheaderimagetype_default'] = 'Imagen del tema';
+$string['courseheaderimagetype_generated'] = 'Textura generada aleatoriamente';
+$string['courseheaderlayout'] = 'Diseño del encabezado';
+$string['courseheaderlayout_desc'] = 'El diseño del encabezado del curso.';
+$string['courseheaderlayout_default'] = 'Predeterminado';
+$string['courseheaderlayout_fullwidth'] = 'Ancho completo';
+$string['coursesheaderposition'] = 'Posición del encabezado de cursos';
+$string['coursesheaderposition_desc'] = 'La posición del encabezado de cursos.';
+$string['coursesheaderposition_top'] = 'En la parte superior';
+$string['coursesheaderposition_content'] = 'En el contenido';
+$string['courseheaderview'] = 'Vista del encabezado';
+$string['courseheaderview_block'] = 'Páginas de contenido de los bloque';
+$string['courseheaderview_course'] = 'Inicio del curso';
+$string['courseheaderview_desc'] = 'Contexto para personalizar el encabezado.';
+$string['courseheaderview_mod'] = 'Actividad';
+$string['courseheaderview_my'] = 'Mis cursos';
+$string['courseheaderview_report'] = 'Reportes';
+$string['courseheaderview_user'] = 'Perfil de usuario';
+$string['coursemenu'] = 'Menú del curso';
+$string['coursemenu_desc'] = 'Utilice la estructura: capacidad|tipo|enlace|destino|etiqueta|claseCSS.<br />
+- La capacidad puede ser * para todos los usuarios.<br />
+- Tipos disponibles: url o mod_modulename (mod_forum, mod_assign, mod_quiz y otros)<br />
+- El enlace puede utilizar {courseid} como clave. Si el tipo es mod_* puede ser "firstchild" para mostrar solo el primer hijo. Si el tipo es URL, puede ser una URL relativa o absoluta.<br />
+- Destino del enlace: _blank, _self u otra opción de destino ancla, también puede estar vacío.';
 $string['fontfamily'] = 'Familia de la fuente';
 $string['fontfamily_desc'] = 'Fuente de Google que se utilizará en el sitio.
 Ver más en <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.
@@ -65,6 +109,7 @@ $string['rawscss_desc'] = 'Utilice este campo para proporcionar código SCSS o C
 $string['rawscsspre'] = 'SCSS inicial sin formato';
 $string['rawscsspre_desc'] = 'En este campo puede proporcionar el código SCSS de inicialización, se inyectará antes que todo lo demás. La mayoría de las veces se usa esta configuración para definir variables.';
 $string['region-above'] = 'Superior';
+$string['region-below'] = 'Bajo el contenido';
 $string['region-bottom'] = 'Abajo';
 $string['region-intocontent'] = 'En el contenido';
 $string['region-top'] = 'Arriba';

@@ -133,7 +133,9 @@
                     </div>
                 {{/hasblocks}}
             </div>
-            {{{ output.full_header }}}
+            {{#courseheaderintop}}
+                {{{ output.full_header }}}
+            {{/courseheaderintop}}
             {{#secondarymoremenu}}
                 <div class="secondary-navigation d-print-none">
                     {{> core/moremenu}}
@@ -169,6 +171,9 @@
                                 </div>
                             </div>
                         {{/overflow}}
+                        {{#courseheaderincontent}}
+                            {{{ output.full_header }}}
+                        {{/courseheaderincontent}}
                         {{{ output.main_content }}}
                         {{{ output.activity_navigation }}}
                         {{{ output.course_content_footer }}}

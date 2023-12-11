@@ -29,12 +29,19 @@ class utils {
      * Wrap text in two spans.
      *
      * @param string $text
+     * @param bool $removeextra Remove content between parentheses.
      * @return string
      */
-    public static function wrap_text(string $text) : string {
+    public static function wrap_text(string $text, bool $removeextra = false) : string {
 
         // Only apply to headings that don't already have HTML tags.
         if (strip_tags($text) == $text) {
+
+            if ($removeextra && strpos($text, '(') > 0) {
+                // Remove content between parentheses.
+                $text = preg_replace('/\([^)]*\)/', '', $text);
+            }
+
             $words = explode(' ', $text);
 
             // Escribir en una variable la primera mitad de las palabras y en otra variable las restantes.
@@ -109,12 +116,16 @@ class utils {
 
         $config = get_config('theme_bambuco');
 
+        if (in_array($config->coursesheader, ['default'])) {
+            return false;
+        }
+
         $pagetype = $PAGE->pagetype;
 
         $enabledviews = explode(',', $config->courseheaderview);
 
         foreach ($enabledviews as $view) {
-            if (strpos($pagetype, $view) === 0) {
+            if (!empty($view) && strpos($pagetype, $view) === 0) {
                 return true;
             }
         }

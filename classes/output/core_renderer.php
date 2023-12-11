@@ -84,7 +84,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
             if ($course) {
 
-                if (!($config->coursesheader == 'default')) {
+                if ($config->coursesheader != 'basic') {
                     if ($config->coursesheader == 'none') {
                         return '';
                     }
@@ -177,7 +177,9 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string the HTML to output.
      */
     public function heading($text, $level = 2, $classes = null, $id = null) {
-        $text = \theme_bambuco\utils::wrap_text($text);
+        global $CFG;
+        $removeextrainwrap = isset($CFG->theme_bambuco_removeextrainwrap) ? $CFG->theme_bambuco_removeextrainwrap : false;
+        $text = \theme_bambuco\utils::wrap_text($text, $removeextrainwrap);
         return parent::heading($text, $level, $classes, $id);
     }
 
