@@ -57,7 +57,8 @@ function theme_bambuco_get_extra_scss($theme) {
     }
 
     // Always return the background image with the scss when we have it.
-    return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
+    // Don't include the $theme->settings->scss because it is included by the parent theme.
+    return $content;
 }
 
 /**
@@ -126,39 +127,6 @@ function theme_bambuco_get_precompiled_css() {
     global $CFG;
 
     return file_get_contents($CFG->dirroot . '/theme/boost/style/moodle.css');
-}
-
-/**
- * Get SCSS to prepend.
- *
- * @param theme_config $theme The theme config object.
- * @return string
- */
-function theme_bambuco_get_pre_scss($theme) {
-
-    $scss = '';
-    $configurable = [
-        // Config key => [variableName, ...].
-        'brandcolor' => ['primary'],
-    ];
-
-    // Prepend variables first.
-    foreach ($configurable as $configkey => $targets) {
-        $value = isset($theme->settings->{$configkey}) ? $theme->settings->{$configkey} : null;
-        if (empty($value)) {
-            continue;
-        }
-        array_map(function($target) use (&$scss, $value) {
-            $scss .= '$' . $target . ': ' . $value . ";\n";
-        }, (array) $targets);
-    }
-
-    // Prepend pre-scss.
-    if (!empty($theme->settings->scsspre)) {
-        $scss .= $theme->settings->scsspre;
-    }
-
-    return $scss;
 }
 
 /**
