@@ -70,6 +70,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
     protected function render_context_header(\context_header $contextheader) {
         global $DB;
 
+        if ($contextheader->headinglevel != 1) {
+            return parent::render_context_header($contextheader);
+        }
+
         // Course header customization.
         $config = get_config('theme_bambuco');
         $inpage = false;
