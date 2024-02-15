@@ -25,3 +25,8 @@
         transform: scale(0);
     }
 }
+
+.navbar.fixed-top .usermenu .login [data-control="bbco-contenthover"] > div {
+    min-width: 200px;
+    right: 0;
+}
