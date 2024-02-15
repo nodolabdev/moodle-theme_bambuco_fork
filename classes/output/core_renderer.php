@@ -52,6 +52,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $context->logourl = $url;
         $context->sitename = format_string($SITE->fullname, true,
                 ['context' => \context_course::instance(SITEID), "escape" => false]);
+        $context->wwwroot = (string)(new \moodle_url('/'));
 
         if ($context->hasidentityproviders) {
             $layout = get_config('theme_bambuco', 'loginformlayout');
@@ -185,6 +186,36 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $removeextrainwrap = isset($CFG->theme_bambuco_removeextrainwrap) ? $CFG->theme_bambuco_removeextrainwrap : false;
         $text = \theme_bambuco\utils::wrap_text($text, $removeextrainwrap);
         return parent::heading($text, $level, $classes, $id);
+    }
+
+
+    /**
+     * Render the login signup form into a nice template for the theme.
+     *
+     * @param mform $form
+     * @return string
+     */
+    public function render_login_signup_form($form) {
+        global $OUTPUT, $CFG;
+
+        $signupidentityproviders = get_config('theme_bambuco', 'signupidentityproviders');
+        $content = parent::render_login_signup_form($form);
+
+        if ($signupidentityproviders && !$CFG->authpreventaccountcreation) {
+
+            $authsequence = get_enabled_auth_plugins(true);
+            $providers = \auth_plugin_base::get_identity_providers($authsequence);
+            $identityproviders = \auth_plugin_base::prepare_identity_providers_for_output($providers, $OUTPUT);
+
+            $context = [
+                'identityproviders' => $identityproviders,
+                'hasidentityproviders' => !empty($identityproviders),
+            ];
+
+            $content .= $this->render_from_template('theme_bambuco/login_external', $context);
+        }
+
+        return $content;
     }
 
 }

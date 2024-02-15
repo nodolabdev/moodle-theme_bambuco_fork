@@ -36,6 +36,14 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Include signup with externals.
+    $name = 'theme_bambuco/signupidentityproviders';
+    $title = new lang_string('signupidentityproviders', 'theme_bambuco');
+    $description = new lang_string('signupidentityproviders_desc', 'theme_bambuco');
+    $setting = new admin_setting_configcheckbox($name, $title, $description, '0');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Login Background image setting.
     $name = 'theme_bambuco/loginbackgroundimage';
     $title = new lang_string('loginbackgroundimage', 'theme_bambuco');

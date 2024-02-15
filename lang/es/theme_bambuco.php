@@ -98,6 +98,8 @@ $string['nobootswatch'] = 'Ninguno';
 $string['otherfontfamily'] = 'Otra fuentes';
 $string['otherfontfamily_desc'] = 'Otras fuentes a incluir en el sitio. La fuente no se aplica al sitio, sólo se incluye en la página.';
 $string['pluginname'] = 'BambuCo';
+$string['potentialidpsregister'] = 'Regístrese usando su cuenta de:';
+$string['potentialidpsregister_help'] = 'Puede registrarse en el sitio usando una cuenta de un sitio externo. Su cuenta se creará con los datos que proporcione esa plataforma y podrá seguir entrando con la misma cuenta.';
 $string['presetfiles'] = 'Archivos preestablecidos';
 $string['presetfiles_desc'] = 'Los archivos preestablecidos se pueden utilizar para alterar drásticamente la apariencia del tema.
 Consulte <a href="https://docs.moodle.org/dev/Boost_Presets" target="_blanck">Boost presets</a> para obtener información sobre cómo crear y compartir sus propios archivos preestablecidos, y consulte el <a href= "https://archive.moodle.net/boost" target="_blanck">Repositorio de ajustes preestablecidos</a> para ajustes preestablecidos que otros han compartido.';
@@ -117,6 +119,8 @@ $string['region-side-pre'] = 'Derecha';
 $string['signup'] = 'Registrarse';
 $string['signuplink'] = 'Enlace de registro';
 $string['signuplink_desc'] = 'Mostrar un enlace a la página de registro en la barra del menú de usuario.';
+$string['signupidentityproviders'] = 'Mostrar registro con externos';
+$string['signupidentityproviders_desc'] = 'Mostrar enlace para usar servicios externos en la página de registro.';
 $string['skin'] = 'Máscara';
 $string['skin_desc'] = 'Elija una máscara para cambiar el aspecto del tema.
 Las opciones actuales se basan en el proyecto <a href="https://bootswatch.com/" target="_blanck">Bootswatch</a>.

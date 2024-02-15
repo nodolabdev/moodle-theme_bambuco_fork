@@ -15,6 +15,10 @@ Package tested in: moodle 4.0+, 4.1+.
 - **GIT:** https://github.com/bambuco/moodle-theme_bambuco
 
 ## IN VERSION ##
+2023012910:
+- New setting: signup with identity providers.
+- Integration with auth_customized.
+
 2023012909:
 - Course header position
 - Course header basic style

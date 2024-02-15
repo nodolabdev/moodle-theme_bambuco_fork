@@ -98,6 +98,8 @@ $string['nobootswatch'] = 'None';
 $string['otherfontfamily'] = 'Other font family';
 $string['otherfontfamily_desc'] = 'Other fonts to include in the site. The font is not applied to the site, it is only included in the page.';
 $string['pluginname'] = 'BambuCo';
+$string['potentialidpsregister'] = 'Register using your account:';
+$string['potentialidpsregister_help'] = 'You can register on the site using an account on an external site. Your account will be created with the data provided by that platform and you will be able to continue logging in with the same account.';
 $string['presetfiles'] = 'Additional theme preset files';
 $string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme.
 See <a href="https://docs.moodle.org/dev/Boost_Presets" target="_blanck">Boost presets</a> for information on creating and sharing your own preset files, and see the <a href="https://archive.moodle.net/boost" target="_blanck">Presets repository</a> for presets that others have shared.';
@@ -117,6 +119,8 @@ $string['region-side-pre'] = 'Right';
 $string['signup'] = 'Sign up';
 $string['signuplink'] = 'Show signup link';
 $string['signuplink_desc'] = 'Show a link to the signup page in the usermenu bar.';
+$string['signupidentityproviders'] = 'Show signup with externals';
+$string['signupidentityproviders_desc'] = 'Show link to use external services in signup page.';
 $string['skin'] = 'Skin';
 $string['skin_desc'] = 'Pick a skin to change the look of the theme.
 The current skins are based on <a href="https://bootswatch.com/" target="_blanck">Bootswatch</a> project.

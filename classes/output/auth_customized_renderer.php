@@ -15,33 +15,33 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme BambuCo.
+ * Overriden auth_customized renderer.
  *
  * @package    theme_bambuco
- * @copyright  2023 David Herney Bernal - cirano. https://bambuco.co
+ * @copyright  2024 David Herney Bernal - cirano. https://bambuco.co
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-// This line protects the file from being accessed by a URL directly.
-defined('MOODLE_INTERNAL') || die();
+namespace theme_bambuco\output;
 
-// This is the component name of the plugin - it always starts with 'theme_'
-// for themes and should be the same as the name of the folder.
-$plugin->component = 'theme_bambuco';
+/**
+ * Plugin auth_customized renderer custom implementation.
+ *
+ * @package    theme_bambuco
+ * @copyright  2024 David Herney Bernal - cirano. https://bambuco.co
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class auth_customized_renderer extends \auth_customized\output\renderer {
 
-// This is the version of the plugin.
-$plugin->version = 2023012910;
+    /**
+     * Return the template content for the signup.
+     *
+     * @param \auth_customized\forms\signup $form The form renderable
+     * @return string HTML string
+     */
+    public function render_signup(\auth_customized\forms\signup $form) : string {
+        global $OUTPUT;
+        return $OUTPUT->render_login_signup_form($form);
+    }
 
-// This is the named version.
-$plugin->release = '4.1.10';
-
-// This is a stable release.
-$plugin->maturity = MATURITY_STABLE;
-
-// This is the version of Moodle this plugin requires.
-$plugin->requires = 2022112800;
-
-// This is a list of plugins, this plugin depends on (and their versions).
-$plugin->dependencies = [
-    'theme_boost' => 2022041900
-];
+}
