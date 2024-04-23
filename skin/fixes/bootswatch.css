@@ -60,3 +60,7 @@ a:hover {
 .block-timeline > div > .row > * {
     width: auto;
 }
+
+.form-inline .editor_atto_content.form-control {
+    display: block;
+}

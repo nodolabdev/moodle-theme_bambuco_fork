@@ -45,8 +45,8 @@ class utils {
             $words = explode(' ', $text);
 
             // Escribir en una variable la primera mitad de las palabras y en otra variable las restantes.
-            $firsthalf = implode(' ', array_slice($words, 0, count($words) / 2));
-            $secondhalf = implode(' ', array_slice($words, count($words) / 2));
+            $firsthalf = implode(' ', array_slice($words, 0, round(count($words) / 2)));
+            $secondhalf = implode(' ', array_slice($words, round(count($words) / 2)));
 
             $text = \html_writer::tag('span', $firsthalf) . ' ' . \html_writer::tag('span', $secondhalf);
         }
