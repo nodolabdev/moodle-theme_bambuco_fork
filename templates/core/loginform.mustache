@@ -93,27 +93,7 @@
     }
 }}
 
-<div class="loginform">
-    {{#logourl}}
-        <div id="loginlogo" class="login-logo">
-            <a href="{{wwwroot}}">
-                <img id="logoimage" src="{{logourl}}" class="img-fluid" alt="{{sitename}}"/>
-            </a>
-            <h1 class="login-heading sr-only">{{#str}} loginto, core, {{sitename}} {{/str}}</h1>
-        </div>
-    {{/logourl}}
-    {{^logourl}}
-        <h1 class="login-heading mb-4">
-            <a href="{{wwwroot}}">
-                {{#str}} loginto, core, {{sitename}} {{/str}}
-            </a>
-        </h1>
-    {{/logourl}}
-    {{#maintenance}}
-        <div class="alert alert-danger login-maintenance">
-            {{{maintenance}}}
-        </div>
-    {{/maintenance}}
+<div class="alerts">
     {{#error}}
         <a href="#" id="loginerrormessage" class="sr-only">{{error}}</a>
         <div class="alert alert-danger" role="alert">{{error}}</div>

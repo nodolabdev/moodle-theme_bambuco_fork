@@ -24,6 +24,11 @@
         overflow: hidden;
         transform: scale(0);
     }
+
+    .btn-box {
+        text-align: right;
+        padding-bottom: 10px;
+    }
 }
 
 .navbar.fixed-top .usermenu .login [data-control="bbco-contenthover"] > div {

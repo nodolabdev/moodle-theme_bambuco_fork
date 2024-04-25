@@ -44,7 +44,35 @@
                 <section id="region-main" class="col-12 h-100" aria-label="{{#str}}content{{/str}}">
                 <div class="login-wrapper">
                     <div class="login-container">
-                    {{{ output.main_content }}}
+                        <div class="loginform">
+                            {{#logourl}}
+                                <div id="loginlogo" class="login-logo">
+                                    <a href="{{wwwroot}}">
+                                        <img id="logoimage" src="{{logourl}}" class="img-fluid" alt="{{sitename}}"/>
+                                    </a>
+                                    <h1 class="login-heading sr-only">{{#str}} loginto, core, {{sitename}} {{/str}}</h1>
+                                </div>
+                            {{/logourl}}
+                            {{^logourl}}
+                                <h1 class="login-heading mb-4">
+                                    <a href="{{wwwroot}}">
+                                        {{#str}} loginto, core, {{sitename}} {{/str}}
+                                    </a>
+                                </h1>
+                            {{/logourl}}
+                            <div class="btn-box">
+                                <a href="{{wwwroot}}" class="btn btn-light">
+                                    <i class="fa fa-reply"></i>
+                                    {{#str}} returntohome, theme_bambuco {{/str}}
+                                </a>
+                            </div>
+                            {{#maintenance}}
+                                <div class="alert alert-danger login-maintenance">
+                                    {{{maintenance}}}
+                                </div>
+                            {{/maintenance}}
+                            {{{ output.main_content }}}
+                        </div>
                     </div>
                 </div>
                 </section>
