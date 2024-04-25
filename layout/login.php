@@ -40,13 +40,14 @@ if ($url) {
 }
 
 $templatecontext = [
-    'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
+    'sitename' => format_string($SITE->fullname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'bodyattributes' => $bodyattributes,
     'hasmorecontent' => $hasmorecontent,
     'loginmorecontent' => $loginmorecontent,
     'logourl' => $url,
-    'sitename' => format_string($SITE->fullname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
+    'wwwroot' => (string)(new moodle_url('/')),
+    'gotohome' => !$CFG->forcelogin || $PAGE->pagetype != 'login-index',
 ];
 
 echo $OUTPUT->render_from_template('theme_bambuco/login', $templatecontext);
