@@ -51,7 +51,7 @@ function theme_bambuco_get_extra_scss($theme) {
         $content .= ' }';
     }
 
-    $font = $theme->settings->fontfamily;
+    $font = property_exists($theme->settings, 'fontfamily') ? $theme->settings->fontfamily : '';
     if (!empty($font)) {
         $content .= ' body { font-family: "' . $font . '"; } ';
     }
