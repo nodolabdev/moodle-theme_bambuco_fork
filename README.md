@@ -1,6 +1,6 @@
 # THEME BambuCo #
 
-Package tested in: moodle 4.0+, 4.1+.
+Package tested in: moodle 4.3+.
 
 ## QUICK INSTALL ##
 
@@ -15,6 +15,9 @@ Package tested in: moodle 4.0+, 4.1+.
 - **GIT:** https://github.com/bambuco/moodle-theme_bambuco
 
 ## IN VERSION ##
+2024053001:
+- Compatibility with Moodle 4.3+
+
 2023012910:
 - New setting: signup with identity providers.
 - Integration with auth_customized.
