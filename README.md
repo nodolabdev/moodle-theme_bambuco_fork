@@ -15,6 +15,12 @@ Package tested in: moodle 4.0+, 4.1+.
 - **GIT:** https://github.com/bambuco/moodle-theme_bambuco
 
 ## IN VERSION ##
+2023012912:
+- New option to configure the width of the each courses.
+
+2023012911:
+- Appearance unification on pages derived from the login template.
+
 2023012910:
 - New setting: signup with identity providers.
 - Integration with auth_customized.

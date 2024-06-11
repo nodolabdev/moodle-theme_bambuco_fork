@@ -77,6 +77,8 @@ $string['coursemenu_desc'] = 'Use the structure: capability|type|link|target|lab
 - types available: url or mod_modulename (mod_forum, mod_assign, mod_quiz and others)<br />
 - link can use {courseid} as a key. If type is mod_* can be "firstchild" for display only the first child. If type is url can be a relative or absolute url.<br />
 - link target: _blank, _self or other anchor target option, can be empty too';
+$string['coursewidthfield'] = 'Course width field';
+$string['coursewidthfield_desc'] = 'The field to use as the course width on the course page. As the fiel value you can use a percentage value, a fixed measurement like px or em, or use the <b>unlimitedwidth</b> keyword.';
 $string['fontfamily'] = 'Font family';
 $string['fontfamily_desc'] = 'The Google font family to use for the site.
 View more in <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.

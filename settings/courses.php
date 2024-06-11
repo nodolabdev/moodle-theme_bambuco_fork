@@ -139,5 +139,27 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Use field to define course width.
+    // Duration field.
+    $fields = [0 => ''];
+
+    $sql = "SELECT f.id, f.name
+            FROM {customfield_field} f
+            INNER JOIN {customfield_category} fc ON fc.id = f.categoryid AND fc.component = 'core_course' AND fc.area = 'course'";
+    $customfields = $DB->get_records_sql($sql);
+
+    if (is_array($fields) && count($fields) > 0) {
+
+        foreach ($customfields as $k => $v) {
+            $fields[$k] = format_string($v->name, true);
+        }
+    }
+
+    $name = 'theme_bambuco/coursewidthfield';
+    $title = new lang_string('coursewidthfield', 'theme_bambuco');
+    $description = new lang_string('coursewidthfield_desc', 'theme_bambuco');
+    $setting = new admin_setting_configselect($name, $title, $description, '', $fields);
+    $page->add($setting);
+
 }
 $settings->add('theme_bambuco', $page);

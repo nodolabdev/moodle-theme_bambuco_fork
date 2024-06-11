@@ -77,6 +77,8 @@ $string['coursemenu_desc'] = 'Utilice la estructura: capacidad|tipo|enlace|desti
 - Tipos disponibles: url o mod_modulename (mod_forum, mod_assign, mod_quiz y otros)<br />
 - El enlace puede utilizar {courseid} como clave. Si el tipo es mod_* puede ser "firstchild" para mostrar solo el primer hijo. Si el tipo es URL, puede ser una URL relativa o absoluta.<br />
 - Destino del enlace: _blank, _self u otra opción de destino ancla, también puede estar vacío.';
+$string['coursewidthfield'] = 'Campo de ancho del curso';
+$string['coursewidthfield_desc'] = 'El campo a utilizar como ancho del curso en la página del curso. En el valor de dicho campo se puede utilizar un valor en porcentaje, en una medida fija como px o em, o utilizar la palabra clave <b>unlimitedwidth</b>.';
 $string['fontfamily'] = 'Familia de la fuente';
 $string['fontfamily_desc'] = 'Fuente de Google que se utilizará en el sitio.
 Ver más en <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>.
