@@ -1,6 +1,6 @@
 # THEME BambuCo #
 
-Package tested in: moodle 4.3+.
+Package tested in: moodle 4.0+, 4.1+.
 
 ## QUICK INSTALL ##
 
@@ -15,8 +15,6 @@ Package tested in: moodle 4.3+.
 - **GIT:** https://github.com/bambuco/moodle-theme_bambuco
 
 ## IN VERSION ##
-2024053001:
-- Compatibility with Moodle 4.3+
 
 2023012912:
 - New option to configure the width of the each courses.
