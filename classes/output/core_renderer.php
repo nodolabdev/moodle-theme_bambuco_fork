@@ -218,4 +218,41 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $content;
     }
 
+    /**
+     * Returns HTML attributes to use within the body tag. This includes an ID and classes.
+     *
+     * @param string|array $additionalclasses Any additional classes to give the body tag,
+     * @return string
+     */
+    public function body_attributes($additionalclasses = []) {
+        global $DB;
+
+        if (!is_array($additionalclasses)) {
+            $additionalclasses = explode(' ', $additionalclasses);
+        }
+
+        $bodyattributes = ' id="'. $this->body_id() . '"';
+        $coursewidthfield = get_config('theme_bambuco', 'coursewidthfield');
+
+        $bodyclasses = $this->body_css_classes($additionalclasses);
+        $otherattributes = '';
+        if (!empty($coursewidthfield)) {
+            $widthvalue = $DB->get_field('customfield_data', 'value', ['fieldid' => $coursewidthfield,
+                                                                        'instanceid' => $this->page->course->id]);
+
+            $widthvalue = clean_param($widthvalue, PARAM_ALPHANUMEXT);
+            if ($widthvalue) {
+                if ($widthvalue == 'unlimitedwidth') {
+                    $bodyclasses = str_replace('limitedwidth', '', $bodyclasses);
+                } else {
+                    $otherattributes = ' style="max-width:' . $widthvalue . ';"';
+                }
+            }
+        }
+
+        $bodyattributes .= ' class="' . $bodyclasses . '" ' . $otherattributes;
+
+        return $bodyattributes;
+    }
+
 }
