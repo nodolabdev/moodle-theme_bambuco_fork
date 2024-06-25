@@ -15,6 +15,9 @@ Package tested in: moodle 4.3+.
 - **GIT:** https://github.com/bambuco/moodle-theme_bambuco
 
 ## IN VERSION ##
+2024053002:
+- Include core recaptcha requirement in auth.
+
 2024053001:
 - Compatibility with Moodle 4.3+
 
