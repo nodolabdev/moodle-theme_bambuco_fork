@@ -1,0 +1,24 @@
+#page.drawers .main-inner {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#region-main {
+    background-color: transparent;
+}
+
+.dashboard-card-deck .dashboard-card {
+    background-color: #fff;
+}
+
+.block_myoverview.block.card {
+    padding: 10px;
+}
+
+.secondary-navigation .navigation,
+.secondary-navigation .navigation .nav-tabs {
+    background-color: transparent;
+}
+
+.moremenu .nav-link.active:focus, .moremenu .nav-link.active:hover {
+    background-color: #282828;
+}

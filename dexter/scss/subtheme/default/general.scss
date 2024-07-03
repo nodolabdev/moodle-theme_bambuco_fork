@@ -1,0 +1,132 @@
+#block-region-above,
+#block-region-bottom {
+
+    > section {
+        > .card-body {
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #page.drawers {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #block-region-above,
+    #block-region-bottom {
+
+        .block.card {
+            border-radius: unset;
+            border: none;
+        }
+    }
+
+    #block-region-side-pre {
+        .block.card {
+            margin-bottom: 1rem;
+        }
+    }
+
+    #page-wrapper footer#page-footer {
+        max-width: calc(100% + 6rem);
+        width: calc(100% + 6rem);
+        margin: 0 -3rem;
+        border-radius: unset;
+    }
+
+    .footer-content-debugging,
+    .footer-content-popover {
+        margin: 0 3rem;
+    }
+}
+
+#page-user-preferences {
+    #page-content {
+        .card-text {
+            > div {
+                > a {
+                    padding: 10px;
+                    border-bottom: 1px solid #eee;
+                    display: block;
+                    line-height: 110%;
+
+                    &:hover {
+                        background-color: var(--primary);
+                        color: var(--light);
+                        text-decoration: none;
+                    }
+                }
+
+                &:last-child > a {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+#page-user-profile {
+    #page-content {
+        section.node_category {
+            .card-body > ul > li {
+                margin: 0;
+
+                > span {
+                    display: block;
+
+                    > a {
+                        padding: 10px;
+                        border-bottom: 1px solid #eee;
+                        display: block;
+                        line-height: 110%;
+
+                        &:hover {
+                            background-color: var(--primary);
+                            color: var(--light);
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                dl dd > ul > li {
+                    margin: 0;
+
+                    > a {
+                        padding: 10px;
+                        border-bottom: 1px solid #eee;
+                        display: block;
+                        line-height: 110%;
+
+                        &:hover {
+                            background-color: var(--primary);
+                            color: var(--light);
+                            text-decoration: none;
+                        }
+                    }
+
+                    &:last-child {
+                        > a {
+                            border-bottom: none;
+                        }
+                    }
+
+                }
+
+                &:last-child {
+                    > span > a {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#page-tag-index {
+    .media {
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+    }
+}

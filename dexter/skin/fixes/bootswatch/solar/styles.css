@@ -1,0 +1,35 @@
+#page.drawers .main-inner {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#region-main {
+    background-color: transparent;
+}
+
+.dashboard-card-deck .dashboard-card {
+    background-color: #fff;
+}
+
+.dashboard-card-deck .dashboard-card a {
+    color: var(--bs-btn-color);
+}
+
+.block_myoverview.block.card {
+    padding: 10px;
+}
+
+.secondary-navigation .navigation,
+.secondary-navigation .navigation .nav-tabs {
+    background-color: transparent;
+}
+
+.moremenu .nav-link.active:focus,
+.moremenu .nav-link.active:hover,
+.moremenu .nav-link:hover,
+.moremenu .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form-inline .input-group input {
+    height: 100%;
+}
